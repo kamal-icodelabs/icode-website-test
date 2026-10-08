@@ -1,0 +1,16 @@
+{
+  "name": "iCodelabs",
+  "short_name": "iCodelabs",
+  "description": "Marketplace, App & AI Development",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon_dark.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

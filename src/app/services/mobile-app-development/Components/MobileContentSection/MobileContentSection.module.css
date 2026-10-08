@@ -1,0 +1,353 @@
+.mainWrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.imgNcontentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imgContainer {
+    position: relative;
+    width: 526px;
+    height: 552px;
+
+    @media (max-width: 600px) {
+      width: 360px;
+      height: 373px;
+    }
+  }
+
+  .contentContainer {
+    max-width: 648px;
+
+    & h2 {
+      text-align: left;
+      font-size: 42px;
+      line-height: 52px;
+      color: #001730;
+    }
+
+    & p {
+      margin-top: 20px;
+
+      @media (max-width: 600px) {
+        margin-top: 15px;
+      }
+    }
+
+    & .ctaBtn {
+      display: block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: #0075f2;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 10px;
+      font-family: var(--font-inter-tight);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      width: fit-content;
+
+
+      @media (max-width:600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* ------------------------------------ */
+
+.textnImgSectionWrapper {
+  background-color: #2a2b2e;
+  position: relative;
+  overflow: hidden;
+
+  .glowbgLeft {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    left: -20%;
+    top: -20%;
+
+    @media (max-width: 600px) {
+      width: 230px;
+      height: 230px;
+      top: -30%;
+      left: -30%;
+      filter: blur(100px);
+    }
+  }
+
+  .glowbgRight {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    right: -15%;
+    bottom: -25%;
+
+    @media (max-width: 600px) {
+      border-radius: 99rem;
+      width: 230px;
+      height: 230px;
+      bottom: -30%;
+      right: -30%;
+      filter: blur(100px);
+    }
+  }
+
+  .TextnImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .contentContainer {
+      max-width: 648px;
+      z-index: 10;
+      position: relative;
+
+      & h2 {
+        text-align: left;
+        color: #fff;
+
+        & span {
+          color: var(--primary-blue);
+        }
+      }
+
+      & p {
+        color: #fff;
+        margin: 11px 0 30.82px;
+
+        @media (max-width: 600px) {
+          margin-top: 15px 0 20px;
+        }
+      }
+    }
+  }
+}
+
+.GradientImgNTextWrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-dark);
+
+  .glowbgLeft {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    z-index: 1;
+    left: -15%;
+    top: -100%;
+
+    @media (max-width: 992px) {
+      width: 336px;
+      height: 335px;
+      filter: blur(140px);
+      top: 10px;
+      left: -230px;
+    }
+
+    @media (max-width: 600px) {
+      width: 286px;
+      height: 295px;
+    }
+  }
+
+  .glowbgRight {
+    position: absolute;
+    width: 462px;
+    height: 710.77px;
+    background: #0075f2;
+    filter: blur(200px);
+    border-radius: 99rem;
+    z-index: 1;
+    right: -10%;
+    bottom: -90%;
+
+    @media (max-width: 992px) {
+      width: 336px;
+      height: 335px;
+      filter: blur(140px);
+      bottom: -140px;
+      right: -80px;
+    }
+
+    @media (max-width: 600px) {
+      width: 286px;
+      height: 295px;
+    }
+  }
+
+  .imgNcontentWrapper {
+    margin: 0;
+    background-color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 600px) {
+      margin: 40px 0;
+    }
+
+    .contentContainer {
+      z-index: 10;
+      position: relative;
+      width: fit-content;
+      margin: 0;
+
+      & h2 {
+        color: #fff;
+        max-width: 648px;
+      }
+
+      & p {
+        max-width: 578px;
+        margin: 20px 0 30px;
+        color: #fff;
+      }
+    }
+
+    .gradientBox {
+      position: relative;
+      width: 50%;
+      height: 520px;
+      overflow: hidden;
+      background-color: var(--primary-dark);
+
+      @media (max-width: 600px) {
+        width: 100%;
+        height: fit-content;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 216.32px;
+        height: 462px;
+        left: -124.55px;
+        top: -180;
+        background: #0075f2;
+        filter: blur(400px);
+
+        @media (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.bgWrapper {
+  display: flex;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+
+  & .leftContainer {
+    width: 100%;
+    padding: 132px 152px 132px 0;
+    position: relative;
+    z-index: 6;
+
+    @media (max-width: 1600px) {
+      padding-right: 68px;
+    }
+
+    @media (max-width: 1500px) {
+      padding-right: 44px;
+    }
+
+    @media (max-width: 1400px) {
+      padding-right: 10px;
+      padding-left: 40px;
+    }
+
+    @media (max-width: 992px) {
+      padding-left: 24px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 33px 18px 40px 30px;
+    }
+
+    & div {
+      width: 100%;
+      max-width: 648px;
+      margin-left: auto;
+      margin-right: 0;
+
+      & h2 {
+        color: #fff;
+        text-align: left;
+        margin-top: 19.33px;
+
+        @media (max-width: 600px) {
+          margin-top: 27px;
+          width: 100%;
+        }
+      }
+
+      & p {
+        color: #fff;
+
+        margin-top: 20px;
+
+        @media (max-width: 600px) {
+          margin-top: 15px;
+        }
+      }
+
+      & a {
+        margin-top: 30px;
+
+        display: block;
+      }
+    }
+  }
+
+  & .rightContainer {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    max-width: 960px;
+    max-height: 100%;
+    background-image: url("../../../../../../public/assests/img/Grow Your Business.png");
+
+    @media (max-width: 992px) {
+      max-height: 760px;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+      height: 316px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.realTimeStory {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+
+  @media (max-width: 600px) {
+    padding: 0 0 40px;
+  }
+}
+
+.avavtarNname {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & .avatar {
+    border-radius: 180px;
+
+    @media screen {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+  }
+
+  & .name {
+    color: #3d3d3d;
+    font-family: var(--inter-tight);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+  }
+
+  & .desgination {
+    color: #808a9e;
+    font-family: var(--inter-tight);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+}
+
+.info {
+  color: #3d3d3d;
+  font-family: var(--inter-tight);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  /* 118.75% */
+  letter-spacing: 0.1px;
+}
+
+.sectionTitle {
+  text-align: left;
+  color: #001730;
+  font-family: "Cal Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0.1px;
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}

@@ -1,0 +1,649 @@
+/* reparty css is here */
+.gallery_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.rowOne,
+.rowTwo,
+.rowThree,
+.rowFour {
+  /* height: 1024px; */
+  overflow: hidden;
+  width: 100%;
+  background-color: #000;
+  border-radius: 12px;
+}
+
+.rowOne {
+  padding: 50px 50px 0;
+  display: flex;
+  gap: 36px;
+  max-height: 1024px;
+
+  @media (max-width: 1390px) {
+    max-height: 800px;
+  }
+
+  @media (max-width: 1390px) {
+    max-height: 580px;
+  }
+
+  @media (max-width: 600px) {
+    max-height: 290px;
+    height: 100%;
+    /* flex-direction: column; */
+    padding: 24px 24px 0;
+    gap: 16px;
+  }
+
+  .r1i1 {
+    position: relative;
+    width: 100%;
+    max-width: 949px;
+
+    & img {
+      height: auto;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  .r1i2 {
+    position: relative;
+    max-width: 310px;
+    width: 100%;
+
+    & img {
+      object-fit: contain;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+/* row 2 UI */
+
+.rowTwo {
+  display: flex;
+  position: relative;
+  max-height: 1024px;
+  height: 1024px;
+
+  @media (max-width: 992px) {
+    max-height: 580px;
+    height: 580px;
+  }
+
+  @media (max-width: 600px) {
+    max-height: 400px;
+    height: 400px;
+  }
+
+  & .r2i1 {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    bottom: -401px;
+    left: -162px;
+
+    @media (max-width: 992px) {
+      left: -100px;
+      bottom: -290px;
+    }
+
+    @media (max-width: 600px) {
+      left: -60px;
+      bottom: -60px;
+    }
+
+    & img {
+      max-width: 952px;
+      width: 100%;
+      height: 1327px;
+
+      @media (max-width: 992px) {
+        width: 600px;
+        height: auto;
+      }
+
+      @media (max-width: 600px) {
+        width: 300px;
+      }
+    }
+  }
+
+  & .r2i2 {
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    top: -157px;
+    right: -64px;
+
+    @media (max-width: 992px) {
+      top: -290px;
+      right: -40px;
+    }
+
+    @media (max-width: 600px) {
+      top: -120px;
+      right: -160px;
+    }
+
+    & img {
+      width: 100%;
+      max-width: 952px;
+      height: 1078px;
+
+      @media (max-width: 992px) {
+        width: 600px;
+        height: auto;
+      }
+
+      @media (max-width: 600px) {
+        width: 350px;
+      }
+    }
+  }
+}
+
+/* row 3 */
+.rowThree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px 0;
+  position: relative;
+
+  @media (max-width: 600px) {
+    padding: 24px 24px 0;
+  }
+
+  .r3i1 {
+    max-width: 1294px;
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+
+    & img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* row 4 */
+.rowFour {
+  max-height: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 46px;
+
+  @media (max-width: 992px) {
+    max-height: 700px;
+    gap: 26px;
+  }
+
+  @media (max-width: 600px) {
+    max-height: 480px;
+  }
+
+  .gridLeft,
+  .gridRight {
+    display: flex;
+    flex-direction: column;
+    rotate: 10deg;
+    position: relative;
+    left: -100px;
+    /* bottom: 480px; */
+
+    @media (max-width: 992px) {
+      left: -70px;
+      bottom: -50px;
+    }
+
+    @media (max-width: 600px) {
+      left: -120px;
+      bottom: -30px;
+    }
+  }
+
+  .gridLeft {
+    gap: 120px;
+
+    @media (max-width: 992px) {
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      gap: 10px;
+    }
+  }
+
+  .gridRight {
+    gap: 274px;
+
+    @media (max-width: 992px) {
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      gap: 10px;
+    }
+  }
+
+  .r4i1 {
+    max-height: 765px;
+    max-width: 847px;
+
+    @media (max-width: 992px) {
+      & img {
+        width: 400px;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      & img {
+        width: 280px;
+      }
+    }
+  }
+
+  .r4i2 {
+    max-width: 765px;
+    max-height: 966px;
+
+    @media (max-width: 992px) {
+      & img {
+        width: 400px;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      & img {
+        width: 280px;
+      }
+    }
+  }
+
+  .r4i3 {
+    max-width: 765px;
+    max-height: 721px;
+
+    @media (max-width: 992px) {
+      & img {
+        width: 400px;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      & img {
+        width: 280px;
+      }
+    }
+  }
+
+  .r4i4 {
+    max-width: 765px;
+    max-height: 927px;
+
+    @media (max-width: 992px) {
+      & img {
+        width: 400px;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      & img {
+        width: 280px;
+      }
+    }
+  }
+}
+
+.widthFix {
+  width: 100%;
+  display: block;
+  max-width: 310px;
+
+  @media (max-width: 992px) {
+    max-width: 160px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 90px;
+  }
+}
+
+/* ===== repart css end here ==== */
+
+/* ===== Groove Bay UI start here ===== */
+.grooveGallaryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: 600px) {
+    gap: 20px;
+  }
+}
+
+/* ===== Groove Bay UI end here ===== */
+
+.r1im1 {
+  width: 100%;
+  height: 100%;
+  padding: 50px 50px 0;
+  max-height: 1024px;
+  overflow: hidden;
+
+  @media (max-width: 992px) {
+    max-height: 690px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 24px 24px 0;
+    max-height: 250px;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.r1im2 {
+  width: 100%;
+  height: 100%;
+  padding: 50px 50px 0;
+  max-height: 1024px;
+  overflow: hidden;
+
+  @media (max-width: 922px) {
+    max-height: 690px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 24px 24px 0;
+    max-height: 250px;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.r1im3 {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  max-height: 1024px;
+  gap: 40px;
+
+  @media (max-width: 992px) {
+    max-height: 690px;
+  }
+
+  @media (max-width: 600px) {
+    max-height: 250px;
+    gap: 20px;
+  }
+}
+
+.g_left_grid,
+.g_right_grid {
+  position: relative;
+  rotate: 10deg;
+  left: -120px;
+  bottom: 90px;
+
+  @media (max-width: 992px) {
+    left: -200px;
+    bottom: 85px;
+
+    & img {
+      width: 650px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    left: -40px;
+    bottom: 65px;
+
+    & img {
+      width: 260px;
+      height: auto;
+    }
+  }
+}
+
+.g_left_grid {
+  & img {}
+}
+
+.g_right_grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 600px) {
+    gap: 10px;
+  }
+}
+
+/* ========  densyte UI start  here  ======== */
+
+.densyteGallaryLayout {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+
+  .d_r1,
+  .d_r2,
+  .d_r3 {
+    width: 100%;
+    overflow: hidden;
+    max-height: 1024px;
+    height: 100%;
+    border-radius: 12px;
+
+    @media (max-width: 1390px) {
+      max-height: 760px;
+    }
+
+    @media (max-width: 992px) {
+      max-height: 450px;
+    }
+
+    @media (max-width: 600px) {
+      max-height: 260px;
+    }
+  }
+
+  .d_r1 {
+    padding: 50px 50px 0;
+
+    @media (max-width: 600px) {
+      padding: 24px 24px 0;
+    }
+
+    & img {
+      width: 100%;
+
+      @media (max-width: 992px) {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .d_r2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+    padding: 0 50px;
+
+    @media (max-width: 992px) {
+      gap: 32px;
+    }
+
+    @media (max-width: 600px) {
+      gap: 16px;
+      padding: 0 24px;
+      max-height: 220px;
+    }
+
+    & .d_r2i1,
+    & .d_r2i2,
+    & .d_r2i3,
+    & .d_r2i4 {
+      width: 100%;
+      /* max-width: 1358px; */
+
+      & img {
+        width: 100%;
+        height: 1024px;
+
+        @media (max-width: 1390px) {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .d_r3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+
+    .d_r3i1 {
+      position: relative;
+      left: -50px;
+
+      @media (max-width: 1390px) {
+        top: -100px;
+      }
+
+      @media (max-width: 992px) {
+        top: -80px;
+      }
+
+      @media (max-width: 600px) {
+        top: -20px;
+        left: -24px;
+      }
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .d_r3i2 {
+      position: relative;
+      right: -50px;
+
+      @media (max-width: 1390px) {
+        bottom: 100px;
+      }
+
+      @media (max-width: 992px) {
+        bottom: 105px;
+      }
+
+      @media (max-width: 600px) {
+        bottom: 50px;
+        right: -24px;
+      }
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+/* ========  densyte UI end here  ======== */
+
+/* ==== sbonssy UI start here */
+
+.sb_gallaryWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width:600px) {
+    gap: 24px;
+  }
+
+  .sb_r1i1,
+  .sb_r2i1,
+  .sb_r3i1 {
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 50px 50px 0;
+    max-height: 1024px;
+
+    @media (max-width:992px) {
+      max-height: 800px;
+    }
+
+    @media (max-width: 600px) {
+      max-height: 580px;
+      padding: 24px 24px 0;
+    }
+  }
+
+
+
+  .sb_r1i1 {
+
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .sb_r2i1 {
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .sb_r3i1 {
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.sectionPadding {
+  padding: 80px 0;
+
+  @media (max-width:600px) {
+    padding: 40px 0;
+  }
+}
+
+/* ===== sbonssy UI end here */

@@ -1,0 +1,1016 @@
+.mainWrapper {
+  background-color: #000D19;
+}
+
+.packageContainer {
+  padding: 80px 40px;
+
+  @media (max-width: 1024px) {
+    padding: 60px 16px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 40px 16px;
+  }
+
+  .contentContainer {
+    text-align: center;
+
+    & .titleSmall {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #0075F2;
+      font-family: 'Inter Tight', sans-serif;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    & h2 {
+      text-align: center;
+      font-weight: 600;
+      color: #FFFFFF;
+      font-size: 48px;
+      line-height: 56px;
+      margin: 10px 0;
+      font-family: 'Cal Sans', sans-serif;
+
+      @media (max-width: 1024px) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+
+    & .contentText {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 15px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      font-family: 'Inter Tight', sans-serif;
+
+      @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 12px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.prevBtn {
+  left: 16px;
+}
+
+.nextBtn {
+  right: 16px;
+}
+
+.packageCardCarousel {
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  margin-top: 52px;
+  position: relative;
+
+  @media(max-width: 1024px) {
+    margin-top: 40px;
+  }
+
+  @media(max-width: 768px) {
+    border: 0;
+    margin-top: 32px;
+  }
+
+  @media(max-width: 480px) {
+    margin-top: 24px;
+  }
+
+  & .cardLeft,
+  & .cardRight,
+  & .cardMiddle {
+    & .bugFreeText {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.3px;
+      border-radius: 6px;
+      margin-top: 10px;
+      padding: 4px 20px;
+      width: max-content;
+    }
+
+    & h5 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 38px;
+      letter-spacing: 0.3px;
+      margin-bottom: 15px;
+
+      @media(max-width: 1220px) {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0.3px;
+      }
+    }
+
+    & span {
+
+
+      @media(max-width: 1220px) {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+
+    & h4 {
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: 700;
+
+      margin-top: 30px;
+
+      @media(max-width: 1220px) {
+        font-size: 36px;
+        line-height: 42px;
+      }
+
+      @media (max-width: 600px) {
+        margin-top: 15px;
+      }
+    }
+
+    .cnclTxt {
+      text-align: center;
+      color: #949494;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.3px;
+    }
+
+    .bar {
+      display: block;
+      width: 100%;
+      background-color: #354658;
+      height: 1px;
+      margin: 30px 0;
+
+      @media (max-width: 1024px) {
+        margin: 20px 0;
+      }
+    }
+
+    .keyPointsWrapper {
+      .featuretitle {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.1px;
+        color: #fff;
+        margin: 40px 0 30px;
+        font-family: 'Cal Sans', sans-serif;
+
+        @media (max-width: 1024px) {
+          font-size: 18px;
+          line-height: 26px;
+          margin: 30px 0 20px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 24px;
+          margin: 24px 0 16px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 15px;
+          line-height: 22px;
+          margin: 20px 0 12px;
+        }
+      }
+
+      & .planText {
+        color: #fff;
+      }
+
+      & span {
+        display: block;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.3px;
+        color: var(--primary-dark);
+        margin-bottom: 30px;
+        font-weight: 600;
+
+        @media (max-width: 600px) {
+          margin-bottom: 15px;
+        }
+      }
+
+      & .keyPoints {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: start;
+        gap: 16px;
+
+        @media (max-width: 600px) {
+          margin-bottom: 12px;
+        }
+
+        & p {
+          color: #fff !important;
+
+          @media(max-width: 1024px) {
+            font-size: 15px;
+            line-height: 22px;
+          }
+
+          @media(max-width: 768px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          @media(max-width: 480px) {
+            font-size: 13px;
+            line-height: 18px;
+          }
+        }
+
+        & svg {
+          /* margin-top: 6px; */
+          min-width: 20px;
+          width: 20px;
+          margin-top: 3px;
+
+          @media (max-width: 600px) {
+            min-width: 16px;
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  & .cardRight {
+    /* Additional styles can be added here if needed */
+  }
+
+  & .cardMiddle {
+    height: 100%;
+    padding: 0;
+    border-radius: 16px;
+    background-color: #003B79;
+
+    @media (max-width: 600px) {
+      height: 100%;
+    }
+
+    & a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      border: 1px solid #1B1B1B;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: var(--borderRadius);
+      background-color: #fff;
+      padding: 10px 40px;
+
+      margin: 40px 0 0;
+      min-height: 48px;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 28px;
+
+      @media(max-width: 1220px) {
+        margin: 20px 0 0;
+      }
+
+      @media (max-width: 600px) {
+        min-height: 43px;
+      }
+
+      & svg {
+        transition: all ease-in-out 0.3s;
+      }
+
+      &:hover {
+        & svg {
+          rotate: 45deg;
+        }
+      }
+
+      @media (max-width: 600px) {
+        margin: 20px 0 5px;
+      }
+    }
+
+    & .bugFreeText {
+      color: #FFFFFF;
+      border: 1px solid #FFFFFF1A;
+    }
+
+    & .bar {
+      background-color: #F2F2F2;
+    }
+
+    /* &::after {
+      background: linear-gradient(
+        180deg,
+        #e6f1fe 0%,
+        #ffffff 39.42%,
+        #ffffff 100%
+      );
+    } */
+
+    .topBar {
+      background: linear-gradient(90deg, #ed4f2e 0%, #0075f2 100%);
+      text-align: center;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 600;
+
+      padding: 11px 0;
+      color: #fff;
+    }
+
+    .cardContentWrapper {
+      padding: 32px;
+
+      @media(max-width: 768px) {
+        padding: 20px;
+      }
+
+      & .cardTitle {
+        color: #FFFFFF;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 38px;
+        letter-spacing: 0.1px;
+        font-family: 'Cal Sans', sans-serif;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        @media(max-width: 1220px) {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 32px;
+          letter-spacing: 0.3px;
+        }
+
+
+      }
+
+      & .textSubMiddle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        color: #fff;
+        font-family: 'Inter Tight', sans-serif;
+      }
+
+      & a {
+        border: 0;
+        color: #000000;
+        font-weight: 600;
+        min-height: 48px;
+        background: #FFFFFF;
+        border-radius: 12px;
+
+        @media(max-width: 1220px) {
+          margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+          min-height: 43px;
+        }
+
+        & svg {
+          & path {
+            /* Path styles can be added here if needed */
+          }
+        }
+      }
+
+      & .pauseText {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.3px;
+        text-align: center;
+        margin-top: 10px;
+        color: #949494;
+
+        @media(max-width: 768px) {
+          font-size: 12px;
+          line-height: 21px;
+        }
+      }
+
+      & h4 {
+        margin-top: 30px;
+        color: #fff;
+
+        @media (max-width: 600px) {
+          font-size: 36px !important;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.popularBadge {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  border-radius: 12px;
+  color: #EEEEEE;
+  padding: 8px 14px;
+  background: #ED4F2E;
+  font-family: 'Inter Tight', sans-serif;
+
+  @media(max-width: 1220px) {
+    font-size: 12px !important;
+    padding: 5px 10px !important;
+  }
+}
+
+.packageCardCarousel {
+
+  & .cardLeft,
+  & .cardRight {
+    margin-top: 32px;
+
+    & a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      border: 1px solid #FFFFFF33;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: var(--borderRadius);
+      background-color: transparent;
+      padding: 10px 40px;
+      color: #fff;
+      margin: 40px 0 0;
+      min-height: 48px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+
+      @media(max-width: 1220px) {
+        margin: 20px 0 0;
+      }
+
+      @media (max-width: 600px) {
+        min-height: 43px;
+      }
+
+      & svg {
+        transition: all ease-in-out 0.3s;
+      }
+
+      &:hover {
+        & svg {
+          rotate: 45deg;
+        }
+      }
+
+      @media (max-width: 600px) {
+        margin: 20px 0 5px;
+      }
+    }
+
+    & .cardIconBadge {
+      margin-bottom: 20px;
+    }
+
+    & .bugFreeText {
+      color: #0CA471;
+      border: 1px solid #0CA4714D;
+    }
+
+    & .itemText {
+      color: #fff;
+    }
+
+    & .pauseText {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.3px;
+      text-align: center;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    & .textSub {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.3px;
+      color: #FFFFFF;
+    }
+
+    & h4 {
+      color: #FFFFFF;
+    }
+  }
+}
+
+.bottomBar {
+  background: linear-gradient(90deg, #00427f 0%, #000d19 100%);
+  border-radius: var(--borderRadius);
+  padding: 28px 35px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 66.91px auto 0;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  max-width: calc(100% - 160px);
+
+  @media (max-width: 1024px) {
+    gap: 24px;
+    border-bottom: 0;
+    text-align: center;
+    padding: 24px 16px;
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 32px;
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 24px;
+    padding: 16px 0;
+    gap: 16px;
+  }
+
+  & .botomBarHeading {
+    @media (max-width: 1024px) {
+      text-align: center;
+    }
+
+    & .barHeading {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 38px;
+      letter-spacing: 0.1px;
+      font-family: 'Cal Sans', sans-serif;
+
+      @media (max-width: 1024px) {
+        font-size: 28px;
+        line-height: 34px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+
+    & .barSubHeading {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 10px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+      font-family: 'Inter Tight', sans-serif;
+
+      @media (max-width: 768px) {
+        font-size: 15px;
+        line-height: 22px;
+        margin-top: 8px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+
+  & .darkBox {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 28px;
+    background: #FFFFFF;
+    color: #001730;
+    border-radius: var(--borderRadius);
+    padding: 11.5px 20px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    @media (max-width: 600px) {
+      padding: 10px 17px;
+      white-space: nowrap;
+    }
+
+    & .imgContainer {
+      --offsetNumber: -12px;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 600px) {
+        width: 37px;
+      }
+
+      & img {
+        position: relative;
+
+        &:first-child {
+          left: 0;
+          z-index: 1;
+        }
+
+        &:nth-child(2) {
+          left: var(--offsetNumber);
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+.cardRowBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+.statsSection {
+  padding: 80px 0;
+  text-align: center;
+  background: #FFFFFF;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+
+  & .tag {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0075F2;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    font-family: 'Inter Tight', sans-serif;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  & .heading {
+    font-size: 48px;
+    font-weight: 400;
+    color: #001730;
+    line-height: 56px;
+    text-align: center;
+    margin: 10px 0 20px;
+    letter-spacing: 0.1px;
+    font-family: 'Cal Sans', sans-serif;
+
+    @media (max-width: 1024px) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      line-height: 40px;
+      margin: 8px 0 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 28px;
+      line-height: 36px;
+      margin: 6px 0 12px;
+    }
+  }
+
+  & .subtext {
+    font-size: 18px;
+    font-weight: 400;
+    color: #3D3D3D;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    font-family: 'Inter Tight', sans-serif;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+}
+
+.card {
+  gap: 70px;
+  padding: 70px;
+  display: flex;
+  margin-top: 40px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #0075F280;
+  justify-content: space-between;
+  box-shadow: 0px 10px 20px 0px #0075F20D;
+
+  @media(max-width: 1320px) {
+    padding: 50px;
+    gap: 50px;
+  }
+
+  @media(max-width: 1120px) {
+    gap: 30px;
+    padding: 40px;
+  }
+
+  @media(max-width: 1024px) {
+    flex-direction: column;
+    gap: 40px;
+    padding: 32px;
+  }
+
+  @media(max-width: 768px) {
+    padding: 24px;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  @media(max-width: 480px) {
+    padding: 20px;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  & .column {
+    flex: 1;
+    text-align: left;
+
+    & .title {
+      font-size: 36px;
+      font-weight: 400;
+      text-align: left;
+      color: #0075F2;
+      line-height: 44px;
+      margin-bottom: 40px;
+      letter-spacing: 0.3px;
+      font-family: 'Cal Sans', sans-serif;
+
+      @media(max-width: 1320px) {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 30px;
+      }
+
+      @media(max-width: 1024px) {
+        text-align: center;
+      }
+
+      @media(max-width: 768px) {
+        font-size: 26px;
+        line-height: 34px;
+        margin-bottom: 24px;
+      }
+
+      @media(max-width: 480px) {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+    }
+
+    & .titleDark {
+      font-size: 36px;
+      text-align: left;
+      color: #001730;
+      font-weight: 400;
+      line-height: 44px;
+      margin-bottom: 40px;
+      letter-spacing: 0.3px;
+      font-family: 'Cal Sans', sans-serif;
+
+      @media(max-width: 1320px) {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 30px;
+      }
+
+      @media(max-width: 1024px) {
+        text-align: center;
+      }
+
+      @media(max-width: 768px) {
+        font-size: 26px;
+        line-height: 34px;
+        margin-bottom: 24px;
+      }
+
+      @media(max-width: 480px) {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+
+
+.divider {
+  width: 1px;
+  background: #e2e8f0;
+
+  @media(max-width: 1024px) {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.arrowList {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 40px;
+
+  @media(max-width: 1024px) {
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: 768px) {
+    margin-bottom: 24px;
+  }
+
+  & li {
+    font-size: 20px;
+    font-weight: 500;
+    color: #3D3D3D;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    font-family: 'Inter Tight', sans-serif;
+
+    @media(max-width: 1320px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    @media(max-width: 1024px) {
+      font-size: 16px;
+      line-height: 24px;
+      gap: 8px;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    @media(max-width: 480px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @media(max-width: 768px) {
+        margin-bottom: 12px;
+      }
+
+      @media(max-width: 480px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    & .highlight {
+      color: #0075F2;
+    }
+  }
+}
+
+.link {
+  font-size: 16px;
+  color: #0075F2;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  font-family: 'Inter Tight', sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+
+  @media(max-width: 768px) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  @media(max-width: 480px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  & svg {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+
+    @media(max-width: 480px) {
+      margin-left: 8px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &:hover svg {
+    transform: rotate(45deg);
+  }
+}

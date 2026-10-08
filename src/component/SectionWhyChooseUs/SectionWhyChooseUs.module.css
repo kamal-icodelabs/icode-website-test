@@ -1,0 +1,222 @@
+.WhyChooseUsContainer {
+  background-color: var(--bg-cream);
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  & .whyCHooseTab {
+    padding: 5px 20px;
+    background: #e6f1fe;
+    border-radius: 99rem;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    margin-bottom: 15px;
+
+    /* typo */
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+    color: #1b1b1b;
+
+    & span {
+      color: var(--primary-blue);
+    }
+  }
+
+  & h2 {
+    color: var(--primary-dark);
+  }
+
+  & p {
+    font-weight: 400;
+    text-align: center;
+    color: #1b1b1b;
+    margin: auto;
+    width: 60%;
+    margin-top: 10px;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  .contentGridWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin-top: 52px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
+    & .boxContent {
+      border-right: 1px solid var(--borderColor);
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        border-right: 0;
+      }
+
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        border-bottom: 1px solid var(--borderColor);
+      }
+
+      @media (max-width: 1024px) {
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6) {
+          border-right: 0;
+        }
+
+        &:nth-child(3) {
+          border-right: 1px solid var(--borderColor);
+        }
+      }
+
+      @media (max-width: 831px) {
+        border-right: 0;
+        &:nth-child(3) {
+          border-right: 0;
+        }
+      }
+
+      & .heading {
+        color: #001730;
+        text-align: left;
+        font-weight: 600;
+        border-top: 1px solid var(--borderColor);
+        border-bottom: 1px solid var(--borderColor);
+        padding: 20px 30px;
+        align-items: flex-start;
+        display: flex;
+        min-height: 100px;
+        & span {
+          margin-right: 16px;
+        }
+      }
+
+      & .description {
+        
+        font-weight: 500;
+        color: #1B1B1B;
+        font-size: 16px;
+        text-align: left;
+        width: 100%;
+        padding: 0 30px;
+        margin-top: 20px;
+      }
+
+      & .points {
+        padding: 0 30px 30px;
+        margin: 20px 0 0 24px;
+        & li {
+          color: #363636;
+          text-align: left;
+          margin-bottom: 15px;
+          &::marker{
+            color: #0075F2;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  & .whyChooseAccordionWrapper {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+
+    .accordionItem {
+      border-top: 1px solid #ddd;
+      /* border-bottom: 1px solid #ddd; */
+    }
+
+    .accordionHeader {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 18px;
+      padding: 1rem 0;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .accordionBody {
+      padding: 0;
+      display: none;
+
+      & .accordionContent {
+        color: #363636;
+
+        & p {
+          color: #363636;
+          text-align: left;
+          margin-top: 15px;
+        }
+
+        & ul {
+          padding-left: 20px;
+          & li {
+            margin-top: 10px;
+
+            &:last-child {
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .open {
+      display: block;
+      border-top: 1px solid #ddd;
+    }
+
+    .closed {
+      display: none;
+    }
+    .dropDownIcons {
+      & svg {
+        min-width: 15px;
+
+        & path {
+          stroke: #1b1b1b !important;
+          stroke-width: 1.5px !important;
+        }
+      }
+    }
+
+    /* Example for specific items if needed */
+    .accordionItem01 {
+      /* Unique styles if needed */
+    }
+    .accordionItem02 {
+      /* Unique styles if needed */
+    }
+    .accordionItem03 {
+      /* Unique styles if needed */
+    }
+  }
+}

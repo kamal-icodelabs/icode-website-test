@@ -1,0 +1,940 @@
+/* Fonts are loaded via next/font/google in layout.js — no @import needed */
+
+@font-face {
+  font-family: "sunsetgothic";
+  src: url("/assests/img/casestudy/formabel/Sunset-Gothic-Pro.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Termina Test Medium";
+  src: url("https://db.onlinewebfonts.com/t/082e924534e3f190d981507c881d3778.eot");
+  src:
+    url("https://db.onlinewebfonts.com/t/082e924534e3f190d981507c881d3778.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/082e924534e3f190d981507c881d3778.woff") format("woff");
+}
+
+/* Local case-study fonts — these load real .ttf/.otf assets. */
+@font-face {
+  font-family: "Overused Grotesk";
+  src: url("/assests/img/casestudy/promotix/OverusedGrotesk-VF.ttf");
+}
+
+@font-face {
+  font-family: "Roc Grotesk Heavy";
+  src: url("/assests/img/casestudy/lulocal/Fontspring-DEMO-rocgroteskcond-heavy.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roc Grotesk Medium";
+  src: url("/assests/img/casestudy/lulocal/Fontspring-DEMO-rocgroteskcond-medium.otf");
+  font-weight: 500;
+}
+
+/* Note: previously had @font-face entries for Host Grotesk, geist, sfpro,
+   actor, and aileron whose `src:` pointed at Google/cdnfonts STYLESHEET URLs
+   (.../css2?family=...). That's not a valid font src and the browser silently
+   failed to load them — the named families were resolving to sans-serif
+   anyway. Removing the dead declarations to drop the broken network requests.
+   The matching --font-* CSS variables in :root below are preserved (they
+   still resolve to sans-serif fallback, no visual change). */
+
+:root {
+  --background: #ffffff;
+  --foreground: #1b1b1b;
+  --font-sunset-gothic-pro: "sunsetgothic", sans-serif;
+  --font-terminaTest: "Termina Test Medium", sans-serif;
+  --font-hostGrotesk: "Host Grotesk", sans-serif;
+  --font-overused-grotesk: "Overused Grotesk", sans-serif;
+  --font-roc-grotesk-heavy: "Roc Grotesk Heavy", sans-serif;
+  --font-roc-grotesk-medium: "Roc Grotesk Medium", sans-serif;
+  --font-geist: "geist", sans-serif;
+  --font-sfpro: 'sfpro', sans-serif;
+  --font-actor: 'actor', sans-serif;
+  --font-aileron: 'aileron', sans-serif;
+}
+
+:root {
+  --carouselPosition: 252px;
+
+  @media screen and (max-width: 1600px) {
+    --carouselPosition: 100px;
+  }
+
+  @media screen and (max-width: 1536px) {
+    --carouselPosition: 68px;
+  }
+
+  @media screen and (max-width: 1460px) {
+    --carouselPosition: 40px;
+  }
+
+  @media screen and (max-width: 992px) {
+    --carouselPosition: 24px;
+  }
+
+  @media screen and (max-width: 600px) {
+    --carouselPosition: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  touch-action: manipulation;
+}
+
+html,
+body {
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  scroll-margin-top: 100px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-inter-tight), sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-dark);
+  /* Optional semi-transparent background */
+  z-index: 999;
+  /* Ensure it's on top */
+}
+
+/* -------- new loading screen ------- */
+
+.loader {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: var(--primary-blue);
+  animation: l15 1s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+
+@keyframes l15 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* ------------- old loading screen -------- */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* new CSS is here */
+:root {
+  /* Primary Colors */
+  --primary-blue: #0075f2;
+  --primary-dark: #1b1b1b;
+  --orange: #ed4f2e;
+
+  /* Secondary Colors */
+  --secondary-color: #003b79;
+  --secondary-darkBlue: #001730;
+  --secondary-boldBlue: #152035;
+
+  /* Background Support */
+  --bg-aqua: #d3ebff;
+  --bg-aquaSqueeze: #eff7ff;
+  --bg-cream: #fffaea;
+  --bg-snowDrift: #f9f9f9;
+  --bg-dark: #2a2b2e;
+
+  /* Gradient Text */
+  --primaryGradientText: linear-gradient(270deg, #0075f2 0%, #003b79 100%);
+
+  /* Layout */
+  --max-width: 1400px;
+
+  /* Borders */
+  --borderColor: #d1d1d1;
+  --borderRadius: 10px;
+  --borderRadiusMobile: 4.7px;
+
+  /* Grayscale */
+  --grayColor600: #949494;
+}
+
+/* heaidng style start here */
+
+h1 {
+  /* h1 */
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 52px;
+  line-height: 60px;
+  letter-spacing: 0.4px;
+  font-family: "Cal Sans", sans-serif;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 42.5px;
+  }
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 400 !important;
+  color: var(--primary-dark);
+  font-size: 42px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  font-family: "Cal Sans", sans-serif;
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.6px;
+  font-family: "Cal Sans", sans-serif;
+
+  @media (max-width: 1024px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0.6px;
+  font-family: "Cal Sans", sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+}
+
+h5 {
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.6px;
+  color: #1b1b1b;
+  font-family: "Cal Sans", sans-serif;
+
+  @media (max-width: 1024px) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+}
+
+h6 {
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  font-family: "Cal Sans", sans-serif;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+}
+
+.subTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+}
+
+p,
+li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  font-family: var(--font-inter-tight), sans-serif;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 15px !important;
+    line-height: 24px !important;
+  }
+}
+
+/* headinfg style end here */
+
+.btn {
+  & svg {
+    transition: all ease-in-out 0.3s;
+  }
+
+  &:hover {
+    & svg {
+      rotate: 45deg;
+    }
+  }
+}
+
+.primaryBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  gap: 10px;
+  background: var(--primary-blue);
+  border: 0;
+  border-radius: var(--borderRadius);
+  width: fit-content;
+
+  /* typography */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+  cursor: pointer;
+
+  svg {
+    transition: all ease-in-out 0.3s;
+  }
+
+  &:hover {
+    & svg {
+      rotate: 45deg;
+    }
+  }
+
+  & span {
+    transition: all ease-in-out 0.2s;
+  }
+
+  &:hover {
+    & span {
+      scale: 1.2;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    padding: 8px 22px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 8px 18px;
+  }
+
+  @media (max-width: 567px) {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+}
+
+.primaryBtnWhite {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  gap: 10px;
+  width: fit-content;
+  background-color: #fff;
+  border-radius: var(--borderRadius);
+  margin-top: 30px;
+  /* typo */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  color: #1b1b1b;
+
+  & svg {
+    transition: all ease-in-out 0.3s;
+  }
+
+  &:hover {
+    & svg {
+      rotate: 45deg;
+    }
+  }
+}
+
+.outlineBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  border: 1px solid #ffffff;
+  color: #fff;
+  background: transparent;
+  border-radius: var(--borderRadius);
+
+  & svg {
+    transition: all ease-in-out 0.3s;
+  }
+
+  &:hover {
+    & svg {
+      rotate: 45deg;
+    }
+  }
+}
+
+.textBtn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  color: #ffffff;
+
+  & svg {
+    margin-left: 15px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  &:hover {
+    & svg {
+      rotate: 45deg;
+    }
+  }
+}
+
+.primaryGradientBtn {
+  text-align: center;
+  background: linear-gradient(90deg, #0075f2 0%, #ed4f2e 100%);
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 10px 24px rgba(0, 117, 242, 0.24);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.35s ease;
+  will-change: transform, box-shadow;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+        #ed4f2e 0%,
+        rgba(255, 255, 255, 0.7),
+        #0075f2 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -120% -45%;
+    background: linear-gradient(120deg,
+        rgba(255, 255, 255, 0) 38%,
+        rgba(255, 255, 255, 0.26) 50%,
+        rgba(255, 255, 255, 0) 62%);
+    transform: translateX(-120%);
+    z-index: -1;
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  & svg {
+    margin-left: 10px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    stroke-width: 2px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px 14.5px;
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  &:hover {
+    filter: saturate(1.07);
+
+    &::after {
+      opacity: 1;
+    }
+
+    &::before {
+      transform: translateX(120%);
+    }
+
+    & svg {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+/* Deault Hover Effect  */
+
+.defaultGradientBtn {
+  background: linear-gradient(92.91deg, #0075f2 0%, #0075f2 19%, #ed4f2e 100%);
+  background-size: 100% 100%;
+  background-position: 50% center;
+
+  color: #fff;
+  border: none;
+  border-radius: var(--borderRadius);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  cursor: pointer;
+  transition: background-position 0.5s ease;
+}
+
+/* SVG animation */
+.defaultGradientBtn svg {
+  rotate: 0deg;
+  transition: all ease-in-out 0.3s;
+
+  & path {
+    stroke-width: 1.8px;
+  }
+}
+
+/* Hover effect */
+.defaultGradientBtn:hover {
+  background-position: right;
+}
+
+.defaultGradientBtn:hover svg {
+  rotate: 45deg;
+}
+
+/* ------------- section container style STYLE ------------- */
+
+.sectionContainer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* ------------- section container style END ------------- */
+
+/* caourlse customize is here */
+.reviewCarousel .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.reviewCarousel {
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.technoCarousel {
+  & .swiper-slide {
+    padding-left: 16px;
+
+    @media (max-width: 600px) {
+      padding-left: 0;
+    }
+  }
+}
+
+/* landing Page Contact us section tele input styling is here */
+.react-tel-input {
+  display: block;
+  width: 100%;
+
+  .special-label {
+    display: none;
+  }
+}
+
+.customPagination .swiper-pagination {
+  & .swiper-pagination {
+    bottom: 12px !important;
+  }
+
+  & .swiper-pagination-bullet {
+    width: 42px;
+    height: 4px;
+    border-radius: 99rem;
+    background-color: #d9d9d9;
+    opacity: 1;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background: #003b79;
+  }
+}
+
+.customOutterPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+
+  & .custom-swiper-pagination {
+    & .swiper-pagination-bullet {
+      width: 42px;
+      height: 4px;
+      border-radius: 99rem;
+      background-color: #d9d9d9;
+      opacity: 1;
+    }
+
+    & .swiper-pagination-bullet-active {
+      background: var(--primary-blue);
+    }
+  }
+}
+
+.marketplaceSwiperSharetribe,
+.reactNativeCarousel {
+  .swiper-wrapper {
+    margin-bottom: 28px;
+    transform: translateX(252px);
+
+    @media (max-width: 600px) {
+      margin-bottom: 28px;
+    }
+
+    @media screen and (max-width: 1600px) {
+      transform: translateX(100px);
+    }
+
+    @media screen and (max-width: 1536px) {
+      transform: translateX(68px);
+    }
+
+    @media screen and (max-width: 1460px) {
+      transform: translateX(40px);
+    }
+
+    @media screen and (max-width: 992px) {
+      transform: translateX(24px);
+    }
+
+    @media screen and (max-width: 600px) {
+      transform: translateX(0);
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0 !important;
+
+    .swiper-pagination-bullet-active {
+      background-color: #9678fd !important;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #e9e4fd;
+      opacity: 1;
+    }
+  }
+}
+
+.shareTribePagination {
+  .swiper-wrapper {
+    margin-bottom: 40px;
+  }
+}
+
+.shareTribePagination,
+.shareTribeReview {
+  .swiper-wrapper {
+    transform: translateX(252px);
+
+    @media screen and (max-width: 1600px) {
+      transform: translateX(100px);
+    }
+
+    @media screen and (max-width: 1560px) {
+      transform: translateX(73px);
+    }
+
+    @media screen and (max-width: 1536px) {
+      transform: translateX(68px);
+    }
+
+    @media screen and (max-width: 1460px) {
+      transform: translateX(40px);
+    }
+
+    @media screen and (max-width: 992px) {
+      transform: translateX(24px);
+    }
+  }
+}
+
+.shareTribeReview,
+.reactNativeCarousel {
+  .swiper-wrapper {
+    @media screen and (max-width: 600px) {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* common class */
+.grayGradient {
+  background: linear-gradient(180deg, #515151 0%, #323232 100%);
+}
+
+.tealGradient {
+  background: linear-gradient(180deg, #348f50 0%, #48abcb 100%);
+}
+
+.oragangeGradient {
+  background: linear-gradient(104.28deg, #d9d9d9 -5.18%, #67054d 98.51%);
+}
+
+.sepiaGradient {
+  background: linear-gradient(180deg, #0997a7 0%, #01424b 102.2%);
+}
+
+.darkOrangeGradient {
+  background: linear-gradient(180deg, #000000 0%, #9c3e1c 51.44%, #ffae00 100%);
+}
+
+.paddingExtra {
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-bottom: 40px;
+  }
+}
+
+/* Contact Us Form - Tele Style Improvements */
+
+/* Reset padding and margin */
+.css-hlgwow,
+.css-19bb58m {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Placeholder styling */
+.css-8eoifx-placeholder {
+  font-weight: 400 !important;
+  color: #ffffffcc;
+  font-size: 20px !important;
+
+  @media (max-width: 600px) {
+    font-size: 16px !important;
+    line-height: 24px;
+  }
+}
+
+/* Dropdown menu options */
+.css-on3b40-menu {
+  font-weight: 400 !important;
+  color: var(--primary-dark);
+  font-size: 20px;
+  line-height: 28px;
+
+  @media (max-width: 600px) {
+    font-size: 16px !important;
+    line-height: 24px;
+  }
+}
+
+/* Selected value in dropdown */
+.css-7crn4c-singleValue {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  @media (max-width: 600px) {
+    font-size: 16px !important;
+    line-height: 24px;
+  }
+}
+
+.css-ngbzt2-option,
+.css-i0485p-option,
+.css-c2th17-option,
+.css-132t2vz-option {
+  font-size: 18px !important;
+  line-height: 28px !important;
+
+  @media (max-width: 600px) {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+}
+
+/* Additional label/text style */
+.css-1cfo1cf {
+  font-weight: 400;
+  color: #fff !important;
+}
+
+/* Hide indicator separator in dropdown */
+.css-1u9des2-indicatorSeparator {
+  visibility: hidden;
+}
+
+.sectionTopPadding {
+  padding-top: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+  }
+}
+
+button[aria-label="Country selector"] {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-bottom: 16px;
+
+  @media (max-width: 992px) {
+    padding-bottom: 12px;
+  }
+}
+
+.disabled-element {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.navBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Hide Tawk unread notification badge */
+iframe[title="chat widget"] {
+  overflow: hidden !important;
+}
+
+iframe[title="chat widget"] .tawk-badge,
+iframe[title="chat widget"] .tawk-notification,
+iframe[title="chat widget"] [class*="badge"],
+iframe[title="chat widget"] [class*="unread"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+[id] {
+  scroll-margin-top: 146px;
+}
+
+.sectionPadding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.bSectionPadding {
+  padding-bottom: 80px;
+
+  @media (max-width: 600px) {
+    padding-bottom: 40px;
+  }
+}

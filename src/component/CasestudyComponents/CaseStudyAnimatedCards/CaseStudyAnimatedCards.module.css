@@ -1,0 +1,352 @@
+.sectionPadding {
+  padding: 80px 0;
+
+  @media (max-width: 600px) {
+    padding: 40px 0;
+  }
+}
+
+.imgFlexWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: 600px) {
+    gap: 20px;
+  }
+}
+
+.topPadding {
+  padding-top: 46px;
+
+  @media (max-width: 600px) {
+    padding-top: 20px;
+  }
+}
+
+.noMarginCardImgContainer,
+.fadeUpImg {
+  overflow: hidden;
+  max-height: 1024px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 12px;
+
+  @media (max-width: 992px) {
+    max-height: 800px;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 24px;
+    padding-right: 24px;
+    max-height: 480px;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: -4px;
+  }
+}
+
+.noMarginCardImgContainer {
+  padding: 0 !important;
+}
+
+.carouselImg {
+  flex: 0 0 auto;
+
+  & img {
+    display: block;
+    height: 800px;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
+.carouselWrapper {
+  padding: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 1024px;
+
+  @media (max-width: 992px) {
+    max-height: 800px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 24px;
+    max-height: 480px;
+  }
+
+  .flowCardTitle {
+    & h2 {
+      color: #036;
+      font-family: var(--font-inter-tight);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.653px;
+      text-align: left;
+      margin-bottom: 86px;
+
+      @media (max-with:600px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+.marqueeOuter {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marqueeInner {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: marqueeScroll 150s linear infinite;
+  animation-play-state: paused;
+  will-change: transform;
+
+  &:hover {
+    /* animation-play-state: paused; */
+  }
+}
+
+.marqueeRunning {
+  animation-play-state: running;
+}
+
+.marqueePaused {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeInner {
+    animation: none;
+    transform: none;
+  }
+}
+
+
+.carouselImg {
+  flex-shrink: 0;
+  /* keep whatever width/height you had before */
+}
+
+
+/* looping mobile screens */
+.loopingCardContainer {
+  overflow: hidden;
+}
+
+.gridCarouselWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  & :global(.swiper-wrapper) {
+    transition-timing-function: linear !important;
+  }
+}
+
+.img {
+  height: 300px !important;
+  border-radius: 20px;
+  background: #111;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* looping img card UI */
+
+.loopingScreenCard {
+  /* background-color: #000000; */
+  padding: 50px 0;
+  border-radius: 12px;
+  overflow: hidden;
+
+  & :global(.swiper-wrapper) {
+    align-items: flex-end;
+    transition-timing-function: linear !important;
+  }
+
+  .rowOneCarousel {
+    margin-bottom: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .rowImage {
+      height: 692px;
+      width: fit-content !important;
+
+      & :global(img) {
+        object-fit: contain;
+        /* width: auto; */
+
+      }
+
+      /* &:nth-child(odd) img {
+        height: 293px;
+      } */
+
+      /* &:nth-child(even) img {
+        height: 316px;
+      } */
+    }
+  }
+}
+
+
+
+/* no effect static dashboard Card UI */
+
+.noEffectHeadingImgCard {
+  max-height: 1024px;
+  overflow: hidden;
+  padding: 50px;
+  border-radius: 12px;
+
+  @media (max-width: 992px) {
+    max-height: 800px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 24px;
+    max-height: 480px;
+  }
+
+  .headingWrapper {
+    & h2 {
+      color: #036;
+      font-family: var(--font-inter-tight);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.653px;
+      text-align: left;
+      margin-bottom: 86px;
+
+      @media (max-with:600px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: -4px;
+  }
+}
+
+.fullLengthCardContainer {
+  overflow: hidden;
+  padding: 50px;
+  border-radius: 12px;
+
+  @media (max-width: 600px) {
+    padding: 24px;
+    max-height: 480px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    display: block;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* ── Vertical Carousel ───────────────────────────────────── */
+
+.verticalCarousel {
+  overflow: hidden;
+  border-radius: 12px;
+  width: 100%;
+  padding: 0 50px;
+
+  @media (max-width:600px) {
+    padding: 0 24px;
+  }
+}
+
+.verticalCarouselInner {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+/* The track is duplicated so -50% translateY loops seamlessly */
+.verticalCarouselTrack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  will-change: transform;
+  animation: verticalScroll linear infinite;
+  animation-play-state: paused;
+}
+
+.verticalCarouselRunning {
+  animation-play-state: running;
+}
+
+.verticalCarouselPaused {
+  animation-play-state: paused;
+}
+
+@keyframes verticalScroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verticalCarouselTrack {
+    animation: none;
+  }
+}
+
+.verticalCarouselSlide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.verticalCarouselImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}

@@ -1,0 +1,132 @@
+.section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #004D9F 0%, #003B79 27.65%, #000D18 100%);
+
+    @media (max-width:600px) {
+        padding: 40px 0;
+    }
+}
+
+.ctaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+
+    @media (max-width:600px) {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+.left {
+    max-width: 648px;
+    width: 100%;
+
+    & .sectionLabel {
+        color: #0075F2;
+        font-family: var(--font-inter-tight);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        text-transform: uppercase;
+    }
+
+    & .sectionTitle {
+        color: #FFF;
+        font-family: "Cal Sans";
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 54.5px;
+        letter-spacing: 0.1px;
+        margin: 10px 0 20px;
+        text-align: left;
+
+        @media (max-width:600px) {
+            font-size: 30px;
+            line-height: 38px;
+        }
+    }
+
+    & .sectionInfo {
+        color: #FFF;
+        font-family: var(--font-inter-tight);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        letter-spacing: 0.3px;
+    }
+
+
+}
+
+.right {
+
+    & .ctaTitle {
+        max-width: 434px;
+        color: #FFF;
+        font-family: "Cal Sans";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 38px;
+        letter-spacing: 0.1px;
+        text-align: left;
+
+        @media (max-width:600px) {
+            font-size: 26px;
+            line-height: 36px;
+        }
+    }
+
+    & .btnGroup {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 44px;
+
+        @media (max-width:600px) {
+            flex-direction: column;
+        }
+
+        & .primaryBtn {
+            background-size: 100% 100% !important;
+
+            &:hover {
+                background-size: 150% 100% !important;
+            }
+
+            @media (max-width:600px) {
+                width: 100%;
+            }
+        }
+
+        .secondaryBtn {
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.30);
+            color: #FFF;
+            font-family: var(--font-inter-tight);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            justify-content: center;
+
+
+            @media (max-width:600px) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,310 @@
+.icodeSectionWrapper {
+  background-color: #FFFFFF;
+  padding: 80px 0;
+
+  & .sectionContainer {
+    & .sectionHeading {
+      font-size: 16px;
+      font-weight: 500;
+      color: #0075F2;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+      font-family: 'Inter Tight', sans-serif;
+    }
+
+    & .sectionSubHeading {
+      font-size: 48px;
+      font-weight: 400;
+      color: #001730;
+      line-height: 56px;
+      letter-spacing: 0.1px;
+      font-family: 'Cal Sans', sans-serif;
+
+      & .lightText {
+        color: #949494;
+      }
+    }
+  }
+}
+
+.nonExpertTable {
+  margin-top: 40px;
+  @media(max-width: 768px){
+    display: none;
+  }
+
+  & .table {
+
+    & .header {
+      gap: 20px;
+      display: grid;
+      padding: 18px 40px;
+      align-items: center;
+      background: #F1F7FF;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      & .blackText {
+        color: #001730;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.3px;
+        font-family: 'Inter Tight', sans-serif;
+      }
+
+      & .green {
+        color: #10b981;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.3px;
+        font-family: 'Inter Tight', sans-serif;
+      }
+    }
+
+    & .row {
+      gap: 20px;
+      display: grid;
+      padding: 18px 40px;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid #E5E5E5;
+
+      & .title {
+        color: #3D3D3D;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        font-family: 'Inter Tight', sans-serif;
+      }
+
+      & .bad {
+        gap: 8px;
+        display: flex;
+        font-size: 16px;
+        color: #FA303F;
+        font-weight: 400;
+        line-height: 24px;
+        align-items: center;
+        letter-spacing: 0.3px;
+        font-family: 'Inter Tight', sans-serif;
+        & .cross{
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      & .good {
+        gap: 8px;
+        display: flex;
+        font-size: 16px;
+        font-weight: 400;
+        color: #0CA471;
+        line-height: 24px;
+        align-items: center;
+        letter-spacing: 0.3px;
+        font-family: 'Inter Tight', sans-serif;
+        & .tick {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+
+/* Mobile Cards - Hidden on desktop */
+.mobileCards {
+  display: none;
+  margin-top: 40px;
+  gap: 20px;
+  flex-direction: column;
+
+  & .mobileCard {
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    & .mobileCardTitle {
+      color: #001730;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      margin-bottom: 16px;
+      font-family: 'Inter Tight', sans-serif;
+    }
+
+    & .comparisonRow {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      & .mobileBad,
+      & .mobileGood {
+        & .mobileLabel {
+          font-size: 14px;
+          font-weight: 500;
+          margin-bottom: 8px;
+          font-family: 'Inter Tight', sans-serif;
+        }
+
+        & .mobileContent {
+          gap: 8px;
+          display: flex;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          align-items: flex-start;
+          letter-spacing: 0.3px;
+          font-family: 'Inter Tight', sans-serif;
+
+          & .cross,
+          & .tick {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+          }
+        }
+      }
+
+      & .mobileBad {
+        & .mobileLabel {
+          color: #FA303F;
+        }
+        & .mobileContent {
+          color: #FA303F;
+        }
+      }
+
+      & .mobileGood {
+        & .mobileLabel {
+          color: #0CA471;
+        }
+        & .mobileContent {
+          color: #0CA471;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .icodeSectionWrapper {
+    padding: 60px 0;
+
+    & .sectionContainer {
+      & .sectionSubHeading {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+  }
+
+  .nonExpertTable {
+    & .table {
+      & .header,
+      & .row {
+        padding: 16px 24px;
+        gap: 16px;
+      }
+
+      & .header {
+        & .blackText,
+        & .green {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      & .row {
+        & .title,
+        & .bad,
+        & .good {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .icodeSectionWrapper {
+    padding: 40px 0;
+
+    & .sectionContainer {
+      & .sectionHeading {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      & .sectionSubHeading {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  /* Hide desktop table on mobile */
+  .nonExpertTable {
+    display: none;
+  }
+
+  /* Show mobile cards on mobile */
+  .mobileCards {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .icodeSectionWrapper {
+    padding: 32px 0;
+
+    & .sectionContainer {
+      & .sectionSubHeading {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .mobileCards {
+    margin-top: 32px;
+    gap: 16px;
+
+    & .mobileCard {
+      padding: 16px;
+
+      & .mobileCardTitle {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      & .comparisonRow {
+        gap: 12px;
+
+        & .mobileBad,
+        & .mobileGood {
+          & .mobileLabel {
+            /* font-size: 13px; */
+            margin-bottom: 6px;
+          }
+
+          & .mobileContent {
+            /* font-size: 13px; */
+            line-height: 18px;
+            gap: 6px;
+          }
+        }
+      }
+    }
+  }
+}

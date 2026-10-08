@@ -1,0 +1,78 @@
+@media (min-width: 993px) {
+  .aboutUsAccordionWrapper {
+    display: none;
+  }
+}
+
+.accordionBox {
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: var(--borderRadius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.accordionBox:last-child {
+  margin-bottom: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  & svg {
+    min-width: 32px;
+    height: 32px;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+}
+
+.contentBox {
+  transition: all 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.contentBox h6 {
+  color: #7d7d7d;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.open {
+  max-height: 9999px !important;
+}
+
+.imgNtoggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.info {
+  margin-top: 20px;
+  color: #7d7d7d;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}

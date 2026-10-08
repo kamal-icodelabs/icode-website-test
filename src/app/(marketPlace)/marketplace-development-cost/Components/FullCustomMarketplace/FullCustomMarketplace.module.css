@@ -1,0 +1,448 @@
+.blue {
+    position: relative;
+    overflow: hidden;
+
+    .timeline span,
+    .cardLabel,
+    .cardPrice {
+        color: #0075F2;
+    }
+
+    & svg path,
+    & svg circle {
+        stroke: #0075F2;
+    }
+
+    &::before {
+        content: '';
+        background-color: #0075F2;
+        filter: blur(150px);
+        width: 88px;
+        height: 88.967px;
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    &::after {
+        content: '';
+        background-color: #ED4F2E;
+        filter: blur(150px);
+        width: 88px;
+        height: 88.967px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.green {
+    position: relative;
+    overflow: hidden;
+
+    .timeline span,
+    .cardLabel,
+    .cardPrice {
+        color: #0CA471;
+    }
+
+    & svg path,
+    & svg circle {
+        stroke: #0CA471;
+    }
+
+    &::before {
+        content: '';
+        background-color: #F58D30;
+        filter: blur(150px);
+        right: 0;
+        top: 0;
+        position: absolute;
+        width: 88px;
+        height: 88.967px;
+
+    }
+
+    &::after {
+        content: '';
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        width: 88px;
+        height: 88.967px;
+        background-color: #0CA471;
+        filter: blur(150px);
+    }
+}
+
+
+.red {
+    position: relative;
+    overflow: hidden;
+
+    .timeline span,
+    .cardLabel,
+    .cardPrice {
+        color: #ED4F2E;
+    }
+
+    & svg path,
+    & svg circle {
+        stroke: #ED4F2E;
+    }
+
+
+    &::before {
+        content: '';
+        background-color: #ED4F2E;
+        filter: blur(150px);
+        right: 0;
+        top: 0;
+        position: absolute;
+        width: 88px;
+        height: 88.967px;
+
+    }
+
+    &::after {
+        content: '';
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        width: 88px;
+        height: 88.967px;
+        background-color: #0075F2;
+        filter: blur(150px);
+    }
+}
+
+.fullCustomMarketplaceSection {
+    background-color: #fff;
+    padding: 80px 0;
+
+    @media (max-width: 600px) {
+        padding: 40px 0;
+    }
+
+    .sectionHeader {
+        margin-bottom: 40px;
+
+        & .sectionLabel {
+            color: #0075F2;
+            text-align: center;
+            font-family: var(--font-inter-tight);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            /* 150% */
+            letter-spacing: 0.1px;
+            text-transform: uppercase;
+        }
+
+        & .sectionTitle {
+            color: #001730;
+            font-family: "Cal Sans";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 56px;
+            /* 116.667% */
+            text-align: left;
+            letter-spacing: 0.1px;
+            margin: 0 0 20px;
+
+        }
+
+        & .sectionInfo {
+            color: #3D3D3D;
+            text-align: center;
+            font-family: var(--font-inter-tight);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            /* 155.556% */
+            text-align: left;
+            letter-spacing: 0.3px;
+        }
+    }
+
+
+    .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+
+        .pricingCard {
+            border-radius: 16px;
+            border: 1px solid #E5E5E5;
+            background: #FFF;
+            padding: 32px;
+
+            & .cardLabel {
+                text-align: center;
+                font-family: var(--font-inter-tight);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0.3px;
+                text-transform: uppercase;
+            }
+
+            & .cardTitle {
+                color: #3D3D3D;
+                font-family: var(--font-inter-tight);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: 0.3px;
+            }
+
+            .priceRow {
+                border-bottom: 1px solid #EFEFEF;
+                border-top: 1px solid #EFEFEF;
+                padding: 20px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 0 30px;
+
+                .cardPrice {
+                    font-family: "Cal Sans";
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 44px;
+                    letter-spacing: 0.1px;
+                }
+
+                .timeline {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    & span {
+                        font-family: var(--font-inter-tight);
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px;
+                        /* 150% */
+                        letter-spacing: 0.3px;
+                    }
+                }
+            }
+
+            .featureList {
+                list-style: none;
+
+                & li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                    color: #3D3D3D;
+                    font-family: var(--font-inter-tight);
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px;
+                    letter-spacing: 0.3px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .fullCustomMarketplaceSection {
+        padding: 70px 0;
+
+        .sectionHeader {
+            .sectionTitle {
+                font-size: 42px;
+                line-height: 50px;
+            }
+
+            .sectionInfo {
+                font-size: 17px;
+                line-height: 26px;
+            }
+        }
+
+        .cardContainer {
+            gap: 16px;
+
+            .pricingCard {
+                padding: 26px;
+
+                .priceRow {
+                    .cardPrice {
+                        font-size: 32px;
+                        line-height: 40px;
+                    }
+                }
+
+                .featureList {
+                    & li {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .fullCustomMarketplaceSection {
+        padding: 60px 0;
+
+        .sectionHeader {
+            & .sectionTitle {
+                font-size: 36px;
+                line-height: 44px;
+                margin: 0 0 14px;
+            }
+
+            & .sectionInfo {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .cardContainer {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+
+            .pricingCard {
+                padding: 22px;
+
+                @media (max-width:992px) {
+                    &:last-child {
+                        grid-column: 1/span 2;
+                    }
+                }
+
+                @media (max-width:600px) {
+                    &:last-child {
+                        grid-column: auto;
+                    }
+                }
+
+                .priceRow {
+                    margin: 16px 0 22px;
+                    padding: 16px 0;
+
+                    .timeline {
+                        & span {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+                .featureList {
+                    & li {
+                        align-items: flex-start;
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .fullCustomMarketplaceSection {
+        padding: 50px 0;
+
+        .sectionHeader {
+            & .sectionLabel {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            & .sectionTitle {
+                font-size: 30px;
+                line-height: 38px;
+                margin: 0 0 10px;
+            }
+
+            & .sectionInfo {
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+
+        .cardContainer {
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-top: 20px;
+
+            .pricingCard {
+                padding: 20px 16px;
+
+                & .cardLabel {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                & .cardTitle {
+                    font-size: 18px;
+                    line-height: 26px;
+                    margin: 0;
+                }
+
+                .priceRow {
+                    margin: 14px 0 18px;
+                    padding: 14px 0;
+
+                    .cardPrice {
+                        font-size: 30px;
+                        line-height: 36px;
+                        margin: 0;
+                    }
+                }
+
+                .featureList {
+                    padding: 0;
+                    margin: 0;
+
+                    & li {
+                        gap: 8px;
+                        margin-bottom: 8px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .fullCustomMarketplaceSection {
+        padding: 40px 0;
+
+        .cardContainer {
+            .pricingCard {
+                .priceRow {
+                    .timeline {
+                        & span {
+                            font-size: 13px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
